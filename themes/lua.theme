@@ -1,0 +1,36 @@
+# This is the default theme used by the editor, its not recommended to change this, but to create a new one (Copy it)
+
+HEADER:
+    LANGUAGE=lua 5.1
+
+# Colour formats
+# rgb(0-256, 0-256, 0-256)
+# hex(012345) e.g. hex(#F4B404) or hex(f4b404)
+
+COLOURS:
+    DEFAULT=rgb(240, 240, 240)
+    KEYWORD=rgb(244, 180, 4)
+    COMMENT=rgb(20, 137, 5)
+    STRING=rgb(62, 214, 42)
+    NUMERIC=rgb(37, 202, 232)
+    FUNCTION_NAME=rgb(17, 134, 224)
+    FUNCTION_CALL=rgb(217, 158, 239)
+    PARAM=rgb(239, 237, 215)
+
+KEYWORDS:
+    function
+    end
+    if
+    then
+    for
+    do
+    return
+    in
+    not
+    else
+    elseif
+    false
+    true
+    null
+    local
+    until

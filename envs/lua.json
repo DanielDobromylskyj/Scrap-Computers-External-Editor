@@ -1,0 +1,71 @@
+{
+    "content": {
+        "table": {
+            "content": {
+                "insert": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "table.insert",
+                            "params": [
+                              "table",
+                              "[pos]",
+                              "value"
+                            ],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                },
+              "concat": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "table.concat",
+                            "params": [
+                              "table",
+                              "[sep]",
+                              "[i]",
+                              "[j]"
+                            ],
+                            "returns": [
+                              "string"
+                            ]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "remove": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "table.remove",
+                            "params": [
+                              "table",
+                              "[pos]"
+                            ],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                },
+              "sort": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "table.sort",
+                            "params": [
+                                "table",
+                                "[comp]"
+                            ],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                }
+            },
+            "type": "struct"
+        }
+    },
+    "type": "struct"
+}
