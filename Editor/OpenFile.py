@@ -57,7 +57,17 @@ class OpenFile:
             assert self.raw_lines[i] == expected, f"Validation Failed: Raw/Highlighted line {i+1} mis-match"
 
     def open(self):
-        self.__raw = self.obj.read().replace("\t", "    ")
+        dat = self.obj.read()
+
+        if dat is None:
+            print("[WARNING] Computer failed to load obj. Retrying")
+            dat = self.obj.read()
+
+            if dat is None:
+                print("[WARNING] Failed to open file")
+                return
+
+        self.__raw = dat.replace("\t", "    ")
 
         start = time.time()
         while (not self.__raw) and (start + 1 > time.time()):
