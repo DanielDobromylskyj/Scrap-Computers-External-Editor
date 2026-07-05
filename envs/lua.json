@@ -65,7 +65,418 @@
                 }
             },
             "type": "struct"
-        }
+        },
+        "math": {
+            "content": {
+                "abs": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.abs",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+               "acos": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.acos",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "asin": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.asin",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "atan": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.atan",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+               "atan2": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.atan2",
+                            "params": [
+                              "x", "y"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+                "ceil": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.ceil",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "cos": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.cos",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "cosh": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.cosh",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "deg": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.deg",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "exp": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.exp",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "floor": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.floor",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "fmod": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.fmod",
+                            "params": [
+                              "x", "y"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "frexp": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.frexp",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["integer", "float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "huge": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.huge",
+                            "params": [],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                },
+              "ldexp": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.ldexp",
+                            "params": [
+                              "m", "e"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "log": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.log",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "log10": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.log10",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "max": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.max",
+                            "params": [
+                              "value", "..."
+                            ],
+                            "returns": ["value"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "min": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.min",
+                            "params": [
+                              "value", "..."
+                            ],
+                            "returns": ["value"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "modf": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.modf",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["value", "value"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "pi": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.pi",
+                            "params": [],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                },
+              "pow": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.pow",
+                            "params": [
+                              "x", "y"
+                            ],
+                            "returns": ["value"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "rad": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.rad",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "random": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.random",
+                            "params": [
+                              "[m [, n]]"
+                            ],
+                            "returns": ["integer"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "randomseed": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.randomseed",
+                            "params": [
+                              "seed"
+                            ],
+                            "returns": []
+                        }
+                    },
+                    "type": "struct"
+                },
+              "sin": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.sin",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "sinh": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.sinh",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "sqrt": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.sqrt",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "tan": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.tan",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                },
+              "tanh": {
+                    "content": {
+                        "type": "function",
+                        "content": {
+                            "name": "math.tanh",
+                            "params": [
+                              "value"
+                            ],
+                            "returns": ["float"]
+                        }
+                    },
+                    "type": "struct"
+                }
+            },
+            "type": "struct"
+        },
+        "local": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "function": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "for": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "while": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "repeat": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "until": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "in": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "do": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "if": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "else": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "elseif": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "then": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "end": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "return": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "and": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "or": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "not": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "true": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "false": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } },
+        "null": { "type": "function", "content": { "name": "!KEYWORD", "params": [], "returns": [] } }
     },
     "type": "struct"
 }

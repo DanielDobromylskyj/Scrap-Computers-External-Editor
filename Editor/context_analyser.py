@@ -13,6 +13,7 @@ class DefinitionMap:
     TYPE_TABLE = "table"
     TYPE_VARIABLE = "variable"
     TYPE_FUNCTION = "function"
+    TYPE_KEYWORD = "keyword"
 
     def __init__(self):
         self.variables: dict = {}
@@ -25,6 +26,7 @@ class DefinitionMap:
                 current[step] = {"src":src, "content": {}, "type": self.TYPE_TABLE}
 
             current = current[step]["content"]
+
         return current
 
 

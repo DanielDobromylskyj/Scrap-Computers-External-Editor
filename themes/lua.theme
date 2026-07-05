@@ -34,3 +34,7 @@ KEYWORDS:
     null
     local
     until
+    repeat
+    while
+    and
+    or

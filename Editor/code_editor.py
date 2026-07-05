@@ -476,7 +476,7 @@ class CodeEditor:
                 char_x = round((x-5) / self.cursor.char_width)
                 char_y = y // self.cursor.char_height
 
-                self.set_cursor(char_x, char_y)
+                self.set_cursor(char_x, char_y+self.lines_scrolled)
                 self.set_possibles([])
 
             if event.button == 1:
@@ -484,19 +484,23 @@ class CodeEditor:
                     self.selecting = False
 
                 self.selection_start_x = self.cursor.x
-                self.selection_start_y = self.cursor.y
+                self.selection_start_y = self.cursor.y+self.lines_scrolled
                 self.left_mouse_held = True
 
         elif event.type == pygame.MOUSEWHEEL:
-            if event.y < 0:
-                self.possibles_index = min(len(self.possibles) - 1, self.possibles_index + 1)
+            if self.possibles:
+                if event.y < 0:
+                    self.possibles_index = min(len(self.possibles) - 1, self.possibles_index + 1)
+                    self.redraw_possibles()
+
+                if event.y > 0:
+                    self.possibles_index = max(0, self.possibles_index - 1)
+                    self.redraw_possibles()
+
                 self.redraw_possibles()
 
-            if event.y > 0:
-                self.possibles_index = max(0, self.possibles_index - 1)
-                self.redraw_possibles()
-
-            self.redraw_possibles()
+            else:
+                self.lines_scrolled = max(0, min(len(self.lines), self.lines_scrolled - event.y))
 
         elif event.type == pygame.MOUSEBUTTONUP:
             if event.button == 1:
@@ -619,10 +623,10 @@ class CodeEditor:
             assert self.line_font is not None, "Attempted to draw the cursor with no loaded font"
             cursor = self.line_font.render("|", True, (235, 235, 235))
 
-            surface.blit(cursor, (cursor.get_width() * self.cursor.x - 2, cursor.get_height() * self.cursor.y))
+            surface.blit(cursor, (cursor.get_width() * self.cursor.x - 2, cursor.get_height() * (self.cursor.y-self.lines_scrolled)))
 
             if self.possibles_surface is not None:
                 surface.blit(
                     self.possibles_surface,
-                    (cursor.get_width() * self.cursor.x - 2, cursor.get_height() * (self.cursor.y+1))
+                    (cursor.get_width() * self.cursor.x - 2, cursor.get_height() * (self.cursor.y+1-self.lines_scrolled))
                 )
